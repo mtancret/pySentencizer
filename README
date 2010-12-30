@@ -1,9 +1,16 @@
-README: pySentencize
+README for pySentencize
 
-Description:
-This Python module is a simple sentencizer, tokenizer, and part-of-speech tagger for the English language.
+Description
+=========================
+This Python module is a simple sentencizer, tokenizer, and part-of-speech tagger
+for the English language. It isn't the best at any of these tasks (see the links
+below to related projects), but it offers some unique features in a fast and
+easy to use module. Most importantly, tokens preserve their original formatting,
+so they can be printed with the original punctuation and white space intact.
 
-How To Use:
+
+How To Use
+=========================
 see example.py
 $./example.py < en/doyle-test.txt
 
@@ -15,3 +22,10 @@ $./example.py < en/doyle-test.txt
 >>> Just under the head was a broad silver band nearly an inch across. 
 >>> "To James Mortimer, M.R.C.S., from his friends of the C.C.H.," was engraved upon it, with the date "1884." 
 >>> It was just such a stick as the old-fashioned family practitioner used to carry—dignified, solid, and reassuring.
+
+Related Projects
+=========================
+text-sentence http://pypi.python.org/pypi/text-sentence/
+nlplib http://jasonwiener.com/2006/01/20/simple-nlp-part-of-speech-tagger-in-python/
+NLTK http://www.nltk.org/
+MontyLingua http://web.media.mit.edu/~hugo/montylingua/index.html#documentation
