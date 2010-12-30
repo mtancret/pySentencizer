@@ -5,9 +5,9 @@ Description
 This Python module is a simple sentencizer, tokenizer, and part-of-speech tagger
 for the English language. It isn't the best at any of these tasks (see the links
 below to related projects), but it offers some unique features in a fast and
-easy to use module. Most importantly, tokens preserve their original formatting,
-so they can be printed with the original punctuation and white space intact.
-
+easy to use module. A main feature is that  tokens preserve their original
+formatting, so they can be printed with the original punctuation and white space
+intact.
 
 How To Use
 =========================
