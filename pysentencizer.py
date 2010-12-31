@@ -161,8 +161,11 @@ class Token(object):
 		return repr
 
 class Sentencizer(object):
-	def __init__(self, brillLexicon=None):
-		self.brillLexicon = brillLexicon
+	def __init__(self, brillLexicon="default"):
+		if brillLexicon == "default":
+			self.brillLexicon = BrillLexicon()
+		else:
+			self.brillLexicon = brillLexicon
 
 	def sentencize(self, inputString):
 		### first pass, generate tokens
@@ -269,7 +272,7 @@ class Sentencizer(object):
 					tokens[i-1].value += tokens[i].value
 					tokens[i-1].nextToken = tokens[i].nextToken
 					del tokens[i]
-				# sentence ends with elipse
+				# sentence ends with ellipsis
 				elif tokens[i].value == "." and i+2 < len(tokens) and tokens[i+1].value == "." and tokens[i+2].value == ".":
 					tokens[i].value = "..."
 					tokens[i].nextToken = tokens[i+2].nextToken
@@ -290,6 +293,9 @@ class Sentencizer(object):
 			for word in tokens:
 				if word.isWord:
 					brillTags = self.brillLexicon.getBrillTags(word.value)
+					if len(brillTags) == 0 and word.isSentenceStart:
+						brillTags = self.brillLexicon.getBrillTags(word.value.lower())
+
 					if len(brillTags) > 0:
 						word.brillTag = brillTags[0]
 						word.pos = self.brillLexicon.getPos(word)
@@ -367,9 +373,3 @@ class Sentencizer(object):
 					word.pos = self.brillLexicon.getPos(word)
 					lastWord = word
 		return tokens
-
-def sentencize(inputString):
-	brillLexicon = BrillLexicon()
-	sentencizer = Sentencizer(brillLexicon)
-	result = sentencizer.sentencize(inputString)
-	return result

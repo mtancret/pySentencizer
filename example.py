@@ -3,7 +3,8 @@ import pysentencizer
 import sys
 
 input = sys.stdin.read()
-tokens = pysentencizer.sentencize(input)
+senticizer = pysentencizer.Sentencizer()
+tokens = senticizer.sentencize(input)
 print tokens
 for token in tokens:
 	if token.isSentenceStart:

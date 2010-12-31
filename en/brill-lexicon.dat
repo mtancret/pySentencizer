@@ -41074,7 +41074,8 @@ food-safety JJ NN
 democratized VBN 
 wrapper NN 
 interdenominational JJ 
-jump NN VBP JJ VB
+#jump NN VBP JJ VB
+jump VB JJ NN VBP
 distrubition NN 
 Clinics NNP 
 thousand-fold JJ 
