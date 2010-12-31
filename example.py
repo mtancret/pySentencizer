@@ -6,7 +6,7 @@ input = sys.stdin.read()
 
 senticizer = pysentencizer.Sentencizer()
 tokens = senticizer.sentencize(input)
-#print tokens
+print tokens
 
 for token in tokens:
 	if token.isSentenceStart:
