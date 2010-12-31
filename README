@@ -25,7 +25,10 @@ $./example.py < en/doyle-test.txt
 
 License
 =========================
-Apache License, Version 2.0
+For licensing details, see individual file headers.
+Software licensed under the Apache License, Version 2.0.
+The parts-of-speech lexicon (en/brill-lexicon.dat) licensed under the MIT License.
+Test texts downloaded from Project Gutenberg.
 
 Related Projects
 =========================
