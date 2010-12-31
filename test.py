@@ -22,6 +22,9 @@ Test tagging.
 >>> print sentPos.sentencize("Go.")
 ['Go'/sent_start/para_start/word/capital/verb/VB, '.'/sent_end/para_end/punc]
 
+>>> print sentPos.sentencize("Hark! He read quickly at the magic fountain.")
+['Hark'/sent_start/para_start/word/capital/interjection/UH, '!'/sent_end/punc, 'He'/sent_start/word/capital/pronoun/PRP, 'read'/word/verb/VB, 'quickly'/word/adverb/RB, 'at'/word/preposition/IN, 'the'/word/adjective/DT, 'magic'/word/adjective/JJ, 'fountain'/word/noun/NN, '.'/sent_end/para_end/punc]
+
 Test unusual inputs.
 
 >>> print sentPos.sentencize("")
