@@ -272,6 +272,13 @@ class Sentencizer(object):
 					tokens[i-1].value += tokens[i].value
 					tokens[i-1].nextToken = tokens[i].nextToken
 					del tokens[i]
+				# sentence ends with abbreviation
+				elif tokens[i].value == "." and i > 0 and tokens[i-1].value == "etc":
+					tokens[i-1].isAbbr = True
+					tokens[i-1].value += tokens[i].value
+					tokens[i-1].nextToken = tokens[i].nextToken
+					tokens[i-1].isSentenceEnd = True
+					del tokens[i]
 				# sentence ends with ellipsis
 				elif tokens[i].value == "." and i+2 < len(tokens) and tokens[i+1].value == "." and tokens[i+2].value == ".":
 					tokens[i].value = "..."
@@ -284,9 +291,11 @@ class Sentencizer(object):
 				# sentence ends with . or ! or ?
 				else:
 					tokens[i].isSentenceEnd = True
-			if tokens[i].isSentenceEnd:
+			if i < len(tokens) and tokens[i].isSentenceEnd:
 				sentenceStarted = False
 			i += 1
+		if len(tokens) > 0:
+			tokens[-1].isParaEnd = True
 
 		### fourth pass, assign parts of speech from lexicon
 		if self.brillLexicon != None:
