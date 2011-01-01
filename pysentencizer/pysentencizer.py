@@ -13,7 +13,11 @@
 # limitations under the License.
 
 import string
+import sys
+import os.path
+import distutils.sysconfig
 
+PACKAGE="pysentencizer"
 LOCAL="en"
 SENTENCE_TERMINATORS = (".", "?", "!")
 COMMON_ABBR = ("mr", "mstr", "miss", "mrs", "ms", "dr")
@@ -27,8 +31,20 @@ CONJUNCTION = 7
 INTERJECTION = 8
 
 class BrillLexicon(object):
-	def __init__(self, fileName=LOCAL+"/brill-lexicon.dat"):
+	def __init__(self, fileName=None):
 		self.lexicon = {}
+
+		packageFileName = str(distutils.sysconfig.get_python_lib())+"/"+PACKAGE+"/"+LOCAL+"/brill-lexicon.dat"
+		localFileName = PACKAGE+"/"+LOCAL+"/brill-lexicon.dat"
+
+		if fileName != None:
+			pass
+		elif os.path.isfile(packageFileName):
+			fileName = packageFileName
+		elif os.path.isfile(localFileName):
+			fileName = localFileName
+		else:
+			sys.stderr.write("ERROR: Could not find default Brill lexicon.")
 
 		lexiconFile = open(fileName, "r")
 		for line in lexiconFile.readlines():

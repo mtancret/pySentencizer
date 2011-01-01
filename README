@@ -33,10 +33,17 @@ Test texts downloaded from Project Gutenberg.
 Related Projects
 =========================
 text-sentence
+	A good Python sentence splitter, but it doesn't preserve the original
+	formatting of the text.
 	http://pypi.python.org/pypi/text-sentence/
 nlplib
+	Tags parts of speech using Eric Brill's lexicon and some predefined
+	transition rules. Similar to tagging used in pySentencizer.
 	http://jasonwiener.com/2006/01/20/simple-nlp-part-of-speech-tagger-in-python/
 NLTK
+	pySentencizer is meant to be small and easy to use. If you have more
+	specific natural language processing requirement, you should be using
+	NLTK or MontyLingua.
 	http://www.nltk.org/
 MontyLingua
 	http://web.media.mit.edu/~hugo/montylingua/index.html#documentation
