@@ -2,12 +2,12 @@ README for pySentencizer
 
 Description
 =========================
-This Python module is a simple sentencizer, tokenizer, and part-of-speech tagger
-for the English language. It isn't the best at any of these tasks (see the links
-below for related projects), but it offers some unique features in a fast and
-easy to use module. A main feature is that tokens preserve their original
-formatting, so parts of the text can be reproduced with the original punctuation
-and white space intact.
+This Python module is a simple sentencizer, tokenizer, and parts-of-speech
+tagger for the English language. It isn't the best at any of these tasks (see
+the links below for related projects), but it offers some unique features in a
+fast and easy to use module. A main feature is that tokens preserve their
+original formatting, so parts of the text can be reproduced with the original
+punctuation and white space intact.
 
 How To Use
 =========================
@@ -32,7 +32,14 @@ Test texts downloaded from Project Gutenberg.
 
 Related Projects
 =========================
-text-sentence http://pypi.python.org/pypi/text-sentence/
-nlplib http://jasonwiener.com/2006/01/20/simple-nlp-part-of-speech-tagger-in-python/
-NLTK http://www.nltk.org/
-MontyLingua http://web.media.mit.edu/~hugo/montylingua/index.html#documentation
+text-sentence
+	http://pypi.python.org/pypi/text-sentence/
+nlplib
+	http://jasonwiener.com/2006/01/20/simple-nlp-part-of-speech-tagger-in-python/
+NLTK
+	http://www.nltk.org/
+MontyLingua
+	http://web.media.mit.edu/~hugo/montylingua/index.html#documentation
+Brilltag
+	Brill's parts-of-speech tagger.
+	tagger https://github.com/aidanf/Brilltag
