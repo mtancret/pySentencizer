@@ -9,9 +9,28 @@ fast and easy to use module. A main feature is that tokens preserve their
 original formatting, so parts of the text can be reproduced with the original
 punctuation and white space intact.
 
+Installation
+=========================
+pySentencize is simple enough that all of the code is in one file:
+pysentencizer/pysentencizer.py. If you want, you can copy this file, along
+with the lexicon found in pysentencizer/en, directly into your project.
+
+If you do want to install the pysentencizer module into Python, use the
+following.
+$ python setup.py install
+
 How To Use
 =========================
-see example.py
+Here is a quick example.
+
+$ python
+>>> import pysentencizer
+>>> sentencizer = pysentencizer.Sentencizer()
+>>> print sentencizer.sentencize("Testing.")
+['Testing'/sent_start/para_start/word/capital/verb/VBG, '.'/sent_end/para_end/punc]
+
+The script example.py demonstrates the ability to tokenize and then print
+sentences with original formatting intact.
 $ ./example.py < test/doyle-test.txt
 
 ['Mr.'/sent_start/para_start/word/capital/abbr/noun/NNP, 'Sherlock'/word/capital/noun/NNP, 'Holmes'/word/capital/noun/NNP, ','/punc, 'who'/word/pronoun/WP, 'was'/word/verb/VBD, 'usually'/word/adverb/RB, 'very'/word/adverb/RB, 'late'/word/adjective/JJ, 'in'/word/preposition/IN, 'the'/word/adjective/DT, 'mornings'/word/noun/NNS, ','/punc, 'save'/word/verb/VB, 'upon'/word/preposition/IN, 'those'/word/adjective/DT, 'not'/word/adverb/RB, 'infrequent'/word/adjective/JJ, 'occasions'/word/noun/NNS, 'when'/word/adverb/WRB, 'he'/word/pronoun/PRP, 'was'/word/verb/VBD, 'up'/word/preposition/IN, 'all'/word/adjective/DT, 'night'/word/adjective/JJ, ','/punc, 'was'/word/verb/VBD, 'seated'/word/verb/VBN, 'at'/word/preposition/IN, 'the'/word/adjective/DT, 'breakfast'/word/noun/NN, 'table'/word/adjective/JJ, '.'/sent_end/punc, 'I'/sent_start/word/capital/acronym/pronoun/PRP, 'stood'/word/verb/VBD, 'upon'/word/preposition/IN, 'the'/word/adjective/DT, 'hearth-rug'/word/adjective/JJ, 'and'/word/conjunction/CC, 'picked'/word/verb/VBD, 'up'/word/preposition/IN, 'the'/word/adjective/DT, 'stick'/word/verb/VB, 'which'/word/adjective/WDT, 'our'/word/pronoun/PRP$, 'visitor'/word/noun/NN, 'had'/word/verb/VBD, 'left'/word/verb/VBN, 'behind'/word/preposition/IN, 'him'/word/pronoun/PRP, 'the'/word/adjective/DT, 'night'/word/adjective/JJ, 'before'/word/preposition/IN, '.'/sent_end/punc, 'It'/sent_start/word/capital/pronoun/PRP, 'was'/word/verb/VBD, 'a'/word/adjective/DT, 'fine'/word/adjective/JJ, ','/punc, 'thick'/word/adjective/JJ, 'piece'/word/noun/NN, 'of'/word/preposition/IN, 'wood'/word/noun/NN, ','/punc, 'bulbous-headed'/word/adjective/JJ, ','/punc, 'of'/word/preposition/IN, 'the'/word/adjective/DT, 'sort'/word/noun/NN, 'which'/word/adjective/WDT, 'is'/word/verb/VBZ, 'known'/word/verb/VBN, 'as'/word/preposition/IN, 'a'/word/adjective/DT, '"'/punc, 'Penang'/word/capital/noun/NNP, 'lawyer'/word/noun/NN, '.'/punc, '"'/sent_end/punc, 'Just'/sent_start/word/capital/adverb/RB, 'under'/word/adjective/JJ, 'the'/word/adjective/DT, 'head'/word/noun/NN, 'was'/word/verb/VBD, 'a'/word/adjective/DT, 'broad'/word/adjective/JJ, 'silver'/word/noun/NN, 'band'/word/noun/NN, 'nearly'/word/adverb/RB, 'an'/word/adjective/DT, 'inch'/word/noun/NN, 'across'/word/preposition/IN, '.'/sent_end/punc, '"'/sent_start/punc, 'To'/word/capital/preposition/TO, 'James'/word/capital/noun/NNP, 'Mortimer'/word/capital/noun/NNP, ','/punc, 'M.R.C.S.'/word/capital/abbr/acronym/adjective/CD, ','/punc, 'from'/word/preposition/IN, 'his'/word/pronoun/PRP$, 'friends'/word/noun/NNS, 'of'/word/preposition/IN, 'the'/word/adjective/DT, 'C.C.H.'/word/capital/abbr/acronym/adjective/CD, ','/punc, '"'/punc, 'was'/word/verb/VBD, 'engraved'/word/verb/VBN, 'upon'/word/preposition/IN, 'it'/word/pronoun/PRP, ','/punc, 'with'/word/preposition/IN, 'the'/word/adjective/DT, 'date'/word/noun/NN, '"'/punc, '1884'/number, '.'/punc, '"'/sent_end/punc, 'It'/sent_start/word/capital/pronoun/PRP, 'was'/word/verb/VBD, 'just'/word/adjective/JJ, 'such'/word/adjective/JJ, 'a'/word/adjective/DT, 'stick'/word/verb/VB, 'as'/word/preposition/IN, 'the'/word/adjective/DT, 'old-fashioned'/word/adjective/JJ, 'family'/word/adverb/RB, 'practitioner'/word/noun/NN, 'used'/word/verb/VBN, 'to'/word/preposition/TO, 'carry—dignified', ','/punc, 'solid'/word/adjective/JJ, ','/punc, 'and'/word/conjunction/CC, 'reassuring'/word/adjective/JJ, '.'/sent_end/para_end/punc]
@@ -48,5 +67,5 @@ NLTK
 MontyLingua
 	http://web.media.mit.edu/~hugo/montylingua/index.html#documentation
 Brilltag
-	Brill's parts-of-speech tagger.
+	Eric Brill's original parts-of-speech tagger.
 	tagger https://github.com/aidanf/Brilltag
