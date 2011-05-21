@@ -1,7 +1,8 @@
 README for pySentencizer
 
+================================================================================
 Description
-=========================
+
 This Python module is a simple sentencizer, tokenizer, and parts-of-speech
 tagger for the English language. It isn't the best at any of these tasks (see
 the links below for related projects), but it offers some unique features in a
@@ -9,8 +10,9 @@ fast and easy to use module. A main feature is that tokens preserve their
 original formatting, so parts of the text can be reproduced with the original
 punctuation and white space intact.
 
+================================================================================
 Installation
-=========================
+
 pySentencize is simple enough that all of the code is in one file:
 pysentencizer/pysentencizer.py. If you want, you can copy this file, along
 with the lexicon found in pysentencizer/en, directly into your project.
@@ -19,8 +21,9 @@ If you do want to install the pysentencizer module into Python, use the
 following.
 $ python setup.py install
 
+================================================================================
 How To Use
-=========================
+
 Here is a quick example.
 
 $ python
@@ -42,15 +45,17 @@ $ ./example.py < test/doyle-test.txt
 >>> "To James Mortimer, M.R.C.S., from his friends of the C.C.H.," was engraved upon it, with the date "1884." 
 >>> It was just such a stick as the old-fashioned family practitioner used to carry—dignified, solid, and reassuring.
 
+================================================================================
 License
-=========================
+
 For licensing details, see individual file headers.
 Software licensed under the Apache License, Version 2.0.
 The parts-of-speech lexicon (en/brill-lexicon.dat) licensed under the MIT License.
 Test texts downloaded from Project Gutenberg.
 
+================================================================================
 Related Projects
-=========================
+
 text-sentence
 	A good Python sentence splitter, but it doesn't preserve the original
 	formatting of the text.
@@ -61,7 +66,7 @@ nlplib
 	http://jasonwiener.com/2006/01/20/simple-nlp-part-of-speech-tagger-in-python/
 NLTK
 	pySentencizer is meant to be small and easy to use. If you have more
-	specific natural language processing requirement, you should be using
+	specific natural language processing requirements, you should be using
 	NLTK or MontyLingua.
 	http://www.nltk.org/
 MontyLingua
