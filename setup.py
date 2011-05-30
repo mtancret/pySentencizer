@@ -1,4 +1,7 @@
 #!/usr/bin/env python
+# Name: setup.py
+# Purpose: Installation of pysentencizer.
+# Author(s): Matthew Tan Creti
 #
 # Copyright 2010 Matthew Tan Creti
 #
@@ -22,10 +25,10 @@ setup(
 	description = "Sentencizer, tokenizer, and parts-of-speech tagger",
     
 	version = "0.0.2",
-	url = "http://github.com/mtancret/pySentencizer",
+	url = "http://matthew.tancreti.net/pySentencizer.html",
 	long_description = "This Python module is a simple sentencizer, tokenizer, and parts-of-speech tagger for the English language.",
 	license = "Apache License, Version 2.0",
-	keywords = ["sentencizer", "sentence", "splitter", "tokenizer", "parts-of-speech", "tagger"],
+	keywords = ["sentencizer", "sentence", "splitter", "tokenizer", "parts-of-speech", "pos", "tagger"],
 	author = "Matthew Tan Creti",
 	author_email = "mtancret@purdue.edu",
     

@@ -1,3 +1,7 @@
+# Name: test.py
+# Purpose: Regression tests for pysentencizer.
+# Author(s): Matthew Tan Creti
+#
 # Copyright 2010 Matthew Tan Creti
 #
 # Licensed under the Apache License, Version 2.0 (the "License");

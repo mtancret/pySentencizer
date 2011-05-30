@@ -1,3 +1,7 @@
+# Name: pysentencizer.py
+# Purpose: A simple sentencizer, tokenizer, and parts-of-speech tagger for the English language.
+# Author(s): Matthew Tan Creti
+#
 # Copyright 2010 Matthew Tan Creti
 #
 # Licensed under the Apache License, Version 2.0 (the "License");

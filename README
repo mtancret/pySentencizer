@@ -1,5 +1,4 @@
 README for pySentencizer
-
 ================================================================================
 Description
 
@@ -9,7 +8,6 @@ the links below for related projects), but it offers some unique features in a
 fast and easy to use module. A main feature is that tokens preserve their
 original formatting, so parts of the text can be reproduced with the original
 punctuation and white space intact.
-
 ================================================================================
 Installation
 
@@ -20,7 +18,6 @@ with the lexicon found in pysentencizer/en, directly into your project.
 If you do want to install the pysentencizer module into Python, use the
 following.
 $ python setup.py install
-
 ================================================================================
 How To Use
 
@@ -44,7 +41,6 @@ $ ./example.py < test/doyle-test.txt
 >>> Just under the head was a broad silver band nearly an inch across. 
 >>> "To James Mortimer, M.R.C.S., from his friends of the C.C.H.," was engraved upon it, with the date "1884." 
 >>> It was just such a stick as the old-fashioned family practitioner used to carry—dignified, solid, and reassuring.
-
 ================================================================================
 License
 
@@ -52,7 +48,6 @@ For licensing details, see individual file headers.
 Software licensed under the Apache License, Version 2.0.
 The parts-of-speech lexicon (en/brill-lexicon.dat) licensed under the MIT License.
 Test texts downloaded from Project Gutenberg.
-
 ================================================================================
 Related Projects
 
