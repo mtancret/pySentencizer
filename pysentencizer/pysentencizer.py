@@ -20,6 +20,7 @@ import string
 import sys
 import os.path
 import distutils.sysconfig
+import site
 
 PACKAGE="pysentencizer"
 LOCAL="en"
@@ -40,6 +41,14 @@ class BrillLexicon(object):
 
 		packageFileName = str(distutils.sysconfig.get_python_lib())+"/"+PACKAGE+"/"+LOCAL+"/brill-lexicon.dat"
 		localFileName = PACKAGE+"/"+LOCAL+"/brill-lexicon.dat"
+		
+		# allows looking for the package in, eg, /usr/local/lib
+		siteFileNames = []
+		for dir in site.getsitepackages():
+			siteFileName = dir+"/"+PACKAGE+"/"+LOCAL+"/brill-lexicon.dat"
+			if (os.path.isfile(siteFileName)):
+				fileName = siteFileName
+				break				
 
 		if fileName != None:
 			pass
